@@ -1,0 +1,48 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <form action="/admin/products/update/<%= product._id %>" method="post"> 
+                <h1>Edit Product</h1>
+                
+                <div class="mb-3">
+                    <label for="name" class="form-label custom-label">Name</label>
+                    <input type="text" class="form-control custom-input" id="name" name="name" placeholder="Enter New Name" value="<%= product.name %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label custom-label">Description</label>
+                    <textarea class="form-control custom-input" id="description" rows="3" name="description" placeholder="Enter New Description"><%= product.description %></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="price" class="form-label custom-label">Price</label>
+                    <input type="number" class="form-control custom-input" id="price" name="price" placeholder="Enter New Price" value="<%= product.price %>">
+                </div>
+
+                <div class="mb-3">
+                    <label for="colour" class="form-label custom-label">Colour</label>
+                    <textarea class="form-control custom-input" id="colour" rows="3" name="colour" placeholder="Enter colour"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="fabric" class="form-label custom-label">Fabric</label>
+                    <textarea class="form-control custom-input" id="fabric" rows="3" name="fabric" placeholder="Enter fabric"></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="category" class="form-label custom-label">Category</label>
+                    <select class="form-control custom-input" id="category" name="category">
+                        <% categories.forEach(function(category) { %>
+                            <option value="<%= category._id %>"
+                                    <%= product.category && category._id.toString() === product.category._id.toString() ? 'selected' : '' %>>
+                                    <%= category.name %>
+                            </option>
+                        <% }); %>
+                    </select>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

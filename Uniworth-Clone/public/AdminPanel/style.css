@@ -1,0 +1,188 @@
+/* Import Fonts */
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #fafafa;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: bolder;
+    line-height: 1.5em;
+    color: #999;
+}
+
+a {
+    text-decoration: none !important;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+a:hover {
+    text-decoration: none !important;
+    color: #f1f1f1;
+}
+
+/* Navbar Styling */
+.navbar {
+    margin-top: 5px;
+    
+    background: #041D35;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 80%;
+    z-index: 1000;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    font-weight: bold;
+}
+
+/* Wrapper for Sidebar and Content */
+.wrapper {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Styling */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #041D35;
+    color: white;
+    height: 100vh; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+    transition: all 0.3s;
+    z-index: 999;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #063560;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #063560;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+    color: white;
+}
+
+#sidebar ul li a:hover {
+    color: white;
+    background: #063560;
+}
+
+#sidebar ul li.active > a {
+    background: #041D35; 
+    color: white;
+}
+
+#sidebar ul li.active > a:hover {
+    background: #063560; 
+    color: white;
+}
+
+#sidebar ul li ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background-color: #063560;
+    transition: background 0.3s;
+}
+
+#sidebar ul li ul a:hover {
+    background-color: #041D35;
+    color: white;
+}
+
+
+#sidebar ul li ul a {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#sidebar ul li ul a:hover {
+    border-top: 2px solid #0788FF; 
+    border-bottom: 2px solid #0788FF; 
+    background-color: #041D35; 
+    color: white;
+    border-color:#0788FF;
+}
+
+
+/* Content Area Styling */
+#content{
+    margin-left: 250px; 
+    padding: 10px 20px 20px; 
+    min-height: 100vh;
+    width: calc(100% - 250px);
+    overflow: auto;
+    transition: all 0s; 
+}
+
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+
+    #sidebar.active {
+        margin-left: 0;
+    }
+
+    #content {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+}
+
+/* Form */
+form {
+    border: 2px solid #041D35; 
+    border-radius: 10px; 
+    padding: 20px; 
+}
+
+.custom-input {
+    border: 2px solid #041D35 !important; 
+    border-radius: 5px !important; 
+}
+
+.custom-label {
+    color: #041D35; 
+    font-weight: bold; 
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <title>Account</title>
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: 'Franklin Gothic Medium';
+    }
+
+    body{
+        background-color: #ECEFF2;;
+       
+    }
+
+   
+    /*Nav-Bar*/
+
+    .navbar{
+        height: 35px;
+    }
+
+    .sliding-line {
+        overflow: hidden; 
+
+    }
+
+    .sliding-line span {
+        display: inline-block; 
+        animation: sliding 20s linear infinite;
+    }
+
+    @keyframes sliding {
+        0% {
+            transform: translateX(750px);
+        }
+        100% {
+            transform: translateX(-750px);
+        }
+    } 
+
+
+    .custom-font-size {
+        font-size: 1rem;
+    }
+    
+    @media (max-width: 1040px) {
+        .custom-font-size {
+        font-size: 0.9rem; 
+        }
+    }
+
+    .text-truncate {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    @media (max-width: 324px) {
+        .sliding-font-size {
+        font-size: 10px;
+        }
+    }
+
+    .account-nav-1 a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /*Header*/
+
+
+    header{
+        background-color: white;
+        width: 100%;
+    }
+
+    .main-header{
+        height: 100px; 
+        color: black;
+        font-size: 18px;
+    }
+
+
+    .logo img{
+        height: 80px;
+    }
+
+    .cart img{
+        height: 20px;
+    }
+
+    @media (max-width: 992px) {
+        .menu span, .cart span {
+            display: none; 
+        }
+
+        .logo img {
+            max-width: 80%; 
+            max-height: 60px;
+        }
+    }
+
+    
+    .Shirts-section {
+    
+    width: 100%;
+    height: 100px;
+    padding-top: 50px;
+    padding-bottom: 30px; 
+}
+
+
+    .section-Shirts-n {
+        margin-top: 70px; 
+    }
+
+    /*Shirt*/
+
+    .shirt-container {
+        margin-top: 20px;
+        margin-left: 10px;
+        padding-left: 20px;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .shirt-1 {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 20px;
+        overflow: hidden;
+    }
+
+    .shirt-1 img{
+        width: 90%;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+        .shirt-1 {
+            max-width: 100%;
+        }
+    }
+
+
+    @media (max-width: 576px) {
+        .shirt-1 {
+            max-width: 100%;
+        }
+
+        #Navy-Stripe img.first-image {
+            height: 350px;
+        }
+
+        .heading-name h6 {
+            font-size: 16px;
+        }
+
+        .heading-name h4 {
+            font-size: 16px;
+        }
+    }
+
+
+    @media (max-width: 375px) {
+        .shirt-1 {
+            max-width: 100%;
+        }
+
+        #Navy-Stripe img.first-image {
+            height: 300px;  
+        }
+
+        .heading-name h6 {
+            font-size: 14px;  
+        }
+
+        .heading-name h4 {
+            font-size: 14px;  
+        }
+    }
+
+
+    @media (max-width: 320px) {
+        #Navy-Stripe img.first-image {
+            height: 250px;  
+        }
+
+        .heading-name h6 {
+            font-size: 12px;  
+        }
+
+        .heading-name h4 {
+            font-size: 12px;
+        }
+    }
+
+    .form-control, .form-select {
+        border-color: #9f2d2d; 
+        color: #495057; 
+    }
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #343a40; 
+    }
+
+    .btn-secondary:hover {
+        background-color: #000;
+        color: #fff;
+    }
+
+
+    
+    .footer-class 
+    {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .footer-class p {
+        margin: 0;
+        font-size: 15px;
+    }
+
+        
+
+
+
+
+
+  
+
+</style>
+<body>
+
+    <!-- NavBar -->
+    <nav class="navbar navbar-expand-sm d-flex align-content-center">
+        <div class="container-fluid">
+            <div class="navbar-nav w-100 d-flex justify-content-lg-between justify-content-center " style="height: 35px;">
+                <!-- First item (Phone) -->
+                <li class="nav-item d-none d-lg-flex align-content-center col-lg-4 ms-2">
+                    <a class="nav-link" href="tel:+924211179456">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="custom-font-size" >+92 42 111 79 456</span>
+                    </a>
+                    <a class="nav-link" href="https://wa.me/923454037778" target="_blank">
+                        <i class="fa-brands fa-whatsapp whatsapp-icon"></i>
+                        <span class="custom-font-size" >+92-345-4037778</span>
+                    </a>
+                </li>
+      
+                <!-- Second item (sliding-line) -->
+                <div class="nav-item sliding-line d-flex align-items-center justify-content-center">
+                    <span class="text-turncate sliding-font-size">Free Delivery Available over Rs. 1500 order</span>
+                </div>
+      
+                <!-- Third item (My Account) -->
+                <li class="account-nav-1 nav-item d-none d-lg-flex col-lg-4 justify-content-end align-items-center me-3">
+                    <i class="fa-regular fa-user me-1 account-nav text-dark"></i>
+                    <a href="Login.HTML">My Account</a>
+                </li>
+                
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header -->
+    <header class="position-absolute zindex-header">
+        <div class="container-fluid">
+            <div class="row align-content-center main-header ">
+                <!-- Menu Section -->
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 d-flex justify-content-start ">
+                    <div class="menu d-flex align-items-center ms-3">
+                        <i class="fa-solid fa-bars me-2"></i> 
+                        <span>Menu</span>
+                    </div>
+                </div>
+    
+                <!-- Logo Section -->
+                <div class="col-6 col-md-6 col-lg-6 col-xl-6 text-center">
+                    <div class="logo">
+                        <img src="/bootstrap-work/images/home_logo.png" alt="Logo" class="img-fluid mx-auto d-block" > 
+                    </div>
+                </div>
+    
+                <!-- Cart Section -->
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3  d-flex justify-content-end">
+                    <ul class="cart list-unstyled d-flex align-items-center m-0 me-3">
+                        <li class="me-4 d-flex align-items-center">
+                            <img src="/bootstrap-work/images/Black_Search.png" alt="Search Icon" class="me-2"> 
+                            <span>Search</span>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <i class="fa-solid fa-cart-shopping me-2"></i> 
+                            <span>Bag</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="container-fluid section-Shirts-n py-5 ">
+        <!-- Search, Sort, and Filter Form -->
+        <form action="/mainpage/<%= categoryId %>" method="GET" class="d-flex flex-column flex-md-row align-items-start gap-3 p-3 border rounded shadow-sm bg-light ">
+
+            <!-- Search Input -->
+            <div class="flex-grow-1">
+                <input type="text" name="search" value="<%= search %>" placeholder="Search products" class="form-control" oninput="this.form.submit()">
+            </div>
+        
+            <!-- Filter Dropdown -->
+            <div class="w-90 w-md-auto">
+                <select name="filter" class="form-select" onchange="this.form.submit()">
+                    <option value="">Select Filter</option>
+                    <option value="price_2000-5000" <%= filter === 'price_2000-5000' ? 'selected' : '' %>>Rs. 2000 - Rs. 5000</option>
+                    <option value="price_5001-10000" <%= filter === 'price_5001-10000' ? 'selected' : '' %>>Rs. 5001 - Rs. 10000</option>
+                    <option value="price_10001-20000" <%= filter === 'price_10001-20000' ? 'selected' : '' %>>Rs. 10001 - Rs. 20000</option>
+                    <option value="price_20001-50000" <%= filter === 'price_20001-50000' ? 'selected' : '' %>>Rs. 20001 - Rs. 50000</option>
+                    <option value="price_50000+" <%= filter === 'price_50000+' ? 'selected' : '' %>>Rs. 50000+</option>
+                    <option value="colour_Red" <%= filter === 'colour_Red' ? 'selected' : '' %>>Red</option>
+                    <option value="colour_Blue" <%= filter === 'colour_Blue' ? 'selected' : '' %>>Blue</option>
+                    <option value="colour_Green" <%= filter === 'colour_Green' ? 'selected' : '' %>>Green</option>
+                    <option value="colour_Black" <%= filter === 'colour_Black' ? 'selected' : '' %>>Black</option>
+                    <option value="colour_White" <%= filter === 'colour_White' ? 'selected' : '' %>>White</option>
+                </select>
+            </div>
+        
+            <!-- Sort Dropdown -->
+            <div class="w-90 w-md-auto">
+                <select name="sort" class="form-select" onchange="this.form.submit()">
+                    <option value="">Sort by</option>
+                    <option value="priceAsc" <%= sort === 'priceAsc' ? 'selected' : '' %>>Price: Low to High</option>
+                    <option value="priceDesc" <%= sort === 'priceDesc' ? 'selected' : '' %>>Price: High to Low</option>
+                </select>
+            </div>
+        
+            <!-- Clear Button -->
+            <div class="w-20 w-md-auto">
+                <a href="/mainpage/<%= categoryId %>" class="btn btn-secondary w-100 w-md-auto">Clear</a>
+            </div>
+        
+        </form>
+        
+
+        <!-- Filter, Search, and Sort Section -->
+
+    
+        <!-- Products Grid -->
+        <div class="shirt-container row justify-content-between ">
+            <% if (products.length > 0) { %>
+                <% products.forEach(product => { %>
+                    <div class="col-6 col-md-4 col-lg-4 d-flex flex-column align-items-center box mb-4">
+                        <div class="shirt-1">
+                            <a href="/product/<%= product._id %>" id="<%= product.name.replace(/\s+/g, '-') %>">
+                                <img src="<%= product.image %>" alt="<%= product.name %> - Front" class="first-image">
+                            </a>
+                            <div class="heading-name text-center mt-3">
+                                <h6 class="product-name"><%= product.name %></h6>
+                                <h4 class="product-price">Rs. <%= product.price %></h4>
+                                <h6 class="product-price"><%= product.colour%></h6>
+                            </div>
+                        </div>
+                    </div>
+                <% }); %>
+            <% } else { %>
+                <p class="text-center mt-5">No products found.</p>
+            <% } %>
+        </div>
+    </section>
+    
+    
+
+  
+
+    <footer class="footer-class text-white text-center py-2">
+        <div class="row justify-content-between align-items-center text-center text-md-start">
+            <div class="copywrite col-12 col-md-6">
+                <p class="mb-0">UNIWORTH DRESS CO. All Rights Reserved.</p>
+            </div>
+            <div class="visa col-12 col-md-6 d-flex justify-content-center justify-content-md-end align-items-center">
+                <p class="mb-0 me-2">100% Safe Checkout</p>
+                <img src="/bootstrap-work/images/15.png" alt="Payment Options" class="img-fluid" style="max-width: 200px;">
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function fixFooter() {
+            const footer = document.querySelector('.footer-class');
+            const viewportHeight = window.innerHeight; // Full viewport height
+            const bodyHeight = document.body.scrollHeight; // Total page height
+
+            // If the body is shorter than the viewport, make footer stick to the bottom
+            if (bodyHeight < viewportHeight) {
+                footer.style.position = 'fixed';
+                footer.style.bottom = '0';
+                footer.style.left = '0';
+                footer.style.width = '100%';
+            } else {
+                footer.style.position = 'relative'; // Restore normal flow if content exceeds viewport
+            }
+        }
+
+        // Run on page load and resize
+        window.addEventListener('load', fixFooter);
+        window.addEventListener('resize', fixFooter);
+    </script>
+</body>
+</html>
