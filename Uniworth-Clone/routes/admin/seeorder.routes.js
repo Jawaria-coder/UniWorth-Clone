@@ -18,4 +18,33 @@ router.get('/read', adminMiddleware, async (req, res) => {
     }
 });
 
+router.post("/:id/update", async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    await Order.findByIdAndUpdate(id, { status });
+
+    res.redirect("/admin/orders/read"); // redirect back to orders page
+  } catch (error) {
+    console.error("Error updating order:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+// Delete order
+router.post("/:id/delete", async (req, res) => {
+  try {
+    const { id } = req.params;
+
+    await Order.findByIdAndDelete(id);
+
+    res.redirect("/admin/orders/read"); // redirect back to orders page after deleting
+  } catch (error) {
+    console.error("Error deleting order:", error);
+    res.status(500).send("Internal Server Error");
+  }
+});
+
+
 module.exports = router;

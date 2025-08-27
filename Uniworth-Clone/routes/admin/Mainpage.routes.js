@@ -6,7 +6,8 @@ const productModel = require("../../models/products.model");
 router.get('/', async (req, res) => {
     try {
         const categories = await categoryModel.find(); 
-        res.render("MainPage/bootstrap", { layout: false, categories }); 
+         const username = req.user ? req.user.username : null;
+        res.render("MainPage/bootstrap", { layout: false, categories,username }); 
     } catch (error) {
         console.error("Error fetching categories:", error);
         res.status(500).send("Internal Server Error");
