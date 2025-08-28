@@ -71,7 +71,7 @@ Uniworth-Clone/
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/uniworth-clone.git
+   git clone https://github.com/Jawaria-coder/UniWorth-Clone.git
    cd uniworth-clone
    
 2. Install dependencies:
