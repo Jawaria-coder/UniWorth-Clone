@@ -32,7 +32,7 @@ Built using **Node.js, Express, MongoDB, and EJS views**, it provides both **cus
     - `Delivered`  
     - `Completed`
 
-### 🛠 Admin Panel
+###  Admin Panel
 - Secure **Admin Dashboard** to manage store.  
 - **Product Management**  
   - Add, edit, or remove products.  
@@ -43,7 +43,7 @@ Built using **Node.js, Express, MongoDB, and EJS views**, it provides both **cus
 
 ---
 
-## 🏗️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript, EJS (views)  
 - **Backend:** Node.js, Express.js  
@@ -53,7 +53,8 @@ Built using **Node.js, Express, MongoDB, and EJS views**, it provides both **cus
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
+
 
 Uniworth-Clone/
 ├── views/ # EJS templates (Landing page, Products, Cart, Admin Panel, etc.)
@@ -72,18 +73,13 @@ Uniworth-Clone/
    ```bash
    git clone https://github.com/your-username/uniworth-clone.git
    cd uniworth-clone
-Install dependencies:
+   
+2. Install dependencies:
 
-npm install
-nodemon app.js
-Visit:
+  ```bash
+  1. npm install
+  2. nodemon app.js
 
-http://localhost:2000
-
-Credentials
-User
-Sign up directly from UI.
-
-Admin
-Default Admin can be created directly in DB with isAdmin: true.
-
+  # Visit:
+    http://localhost:2000
+  ```
